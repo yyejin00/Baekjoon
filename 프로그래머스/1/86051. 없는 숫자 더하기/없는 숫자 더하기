@@ -1,0 +1,9 @@
+function solution(numbers) {
+    let blanc=Array(10).fill(0);
+    let number = numbers.sort((a,b)=>a-b).forEach((v,i)=>{
+    blanc[v]=v;
+});
+    let answer=0;
+    blanc.forEach((v,i,arr)=>arr[i]===0?answer+=i:"");
+    return answer;
+}
